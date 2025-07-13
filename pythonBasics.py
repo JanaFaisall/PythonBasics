@@ -153,4 +153,8 @@ while my_variable < 10:
 #This code will give a NameError
 #Variable is not defined 
 
+while x != 0 and x % 2 == 0:
+    x = x / 2
+#No output 
+
 # ------------------------------------------------------------------------------
