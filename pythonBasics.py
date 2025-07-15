@@ -137,24 +137,24 @@ print(len("key"))
 
 # LOOPS
 
-# while loop
-
+# 1. while loop
 #1
 x =   0
 while x < 5:
     print("Not there yet, x=" + str(x))
     x = x + 1
 print("x=" + str(x))
-
 #2
 while my_variable < 10:
     print("Hello")
     my_variable += 1
 #This code will give a NameError
 #Variable is not defined 
-
 while x != 0 and x % 2 == 0:
     x = x / 2
 #No output 
-
+ 
+# 2. for loop
+for i in range(5): 
+ print("This is fun!") # Spece = {} = Block
 # ------------------------------------------------------------------------------
