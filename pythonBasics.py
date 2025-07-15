@@ -45,8 +45,12 @@ print("Hello", name, "\nYour age is", age)
 # ------------------------------------------------------------------------------
 
 # if, elif, else:
-number = -4
 
+n = 4
+if n*6 > n**2 or n%2 == 0: # => True or True => True
+    print("Check") # Output: Check
+
+number = -4
 if number > 0:
  print('Number is positive.')
 elif number == 0:
@@ -138,6 +142,7 @@ print(len("key"))
 # LOOPS
 
 # 1. while loop
+# while loop is used to execute a block of code repeatedly as long as a given condition is true
 #1
 x =   0
 while x < 5:
@@ -155,6 +160,25 @@ while x != 0 and x % 2 == 0:
 #No output 
  
 # 2. for loop
+# for loop is used to iterate over a sequence (like a list, tuple, dictionary, set, or string)
+# for i in range(x, y, z): # x = start, y = stop, z = step
+# 1 stop
 for i in range(5): 
  print("This is fun!") # Spece = {} = Block
+ 
+friends = ['Taylor', 'Alex', 'Pat', 'Eli']
+for friend in friends: # friend = i
+    print("Hi " + friend)
+# -----------------------------------------------------
+ # 2 start, stop
+for i in range(1, 6):
+    print(i) # Output: 1, 2, 3, 4, 5
+# -----------------------------------------------------
+# 3 start, stop, step
+for i in range(1, 10, 2): 
+    print(i) # Output: 1, 3, 5, 7, 9
+for i in range(10, 0, -1):  
+    print(i) # Output: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+# -----------------------------------------------------
+
 # ------------------------------------------------------------------------------
