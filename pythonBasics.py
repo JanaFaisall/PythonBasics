@@ -139,6 +139,10 @@ print(len("key"))
 
 # ------------------------------------------------------------------------------
 
+# Spece Before = {} = Block
+
+# ------------------------------------------------------------------------------
+
 # LOOPS
 
 # 1. while loop
@@ -164,7 +168,7 @@ while x != 0 and x % 2 == 0:
 # for i in range(x, y, z): # x = start, y = stop, z = step
 # 1 stop
 for i in range(5): 
- print("This is fun!") # Spece = {} = Block
+ print("This is fun!")
  
 friends = ['Taylor', 'Alex', 'Pat', 'Eli']
 for friend in friends: # friend = i
@@ -180,5 +184,84 @@ for i in range(1, 10, 2):
 for i in range(10, 0, -1):  
     print(i) # Output: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 # -----------------------------------------------------
+# 4. nested loop
+# A nested loop is a loop inside another loop. The inner loop will be executed one time for each iteration of the outer loop.
+for left in range(7):
+  for right in range(left, 7):
+    print("[" + str(left) + "|" + str(right) + "]", end=" ") # end=" " is used to print in the same line
+  print()
+# Output:
+# [0|0] [0|1] [0|2] [0|3] [0|4] [0|5] [0|6]
+# [1|1] [1|2] [1|3] [1|4] [1|5] [1|6]
+# [2|2] [2|3] [2|4] [2|5] [2|6]
+# [3|3] [3|4] [3|5] [3|6]
+# [4|4] [4|5] [4|6]
+# [5|5] [5|6]
+# [6|6]
+
+# 5
+greeting = 'Hello'
+
+for letter in greeting:
+ print("The next character is: ", letter)
+ # Output: The next character is:  H
+ # The next character is:  e
+ # The next character is:  l
+ # The next character is:  l
+ # The next character is:  o
+
+for i in range(len(greeting)):
+ print(i) 
+# Output: 0
+ # 1
+ # 2
+ # 3
+ # 4
+
+i = 0
+while i < len(greeting):
+	print(greeting[i]) # indexing
+    # This will print one character at a time
+	i += 1
+# Output: H
+# e
+# l
+# l
+# o
+
+greeting = 'Hello'
+i = 0
+while i < len(greeting):
+ print(greeting[i:i+2]) # slicing
+ # This will print two characters at a time
+ i += 1
+ # Output: He
+ # el
+ # lo
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+print(squared_numbers)
+# Output: [1, 4, 9, 16, 25]
 
 # ------------------------------------------------------------------------------
+
+# String -  Slicing (التقطيع أو القص)
+text = "Programming"
+print(text[0])      # P   (الحرف الأول)
+print(text[3:7])    # gram (الحروف من 3 إلى 6)
+print(text[:6])     # Progra (من البداية حتى 5)
+print(text[-3:])    # ing   (آخر 3 أحرف)
+print(text[::2])    # Pgamn (كل حرف ثاني)
+print(text[::-1])   # gnimmargorP (النص مقلوب)
+
+# ----------------------------------------------------------------------------------
+num1 = 0 
+num2 = 0
+
+for x in range(5):
+    num1 = x #4
+    for y in range(14):
+        num2 = y + 3 # 13 +3 = 16
+
+print(num1 + num2) #4 + 16 = 20
