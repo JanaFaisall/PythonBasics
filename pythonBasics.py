@@ -244,18 +244,6 @@ squared_numbers = [x ** 2 for x in numbers]
 print(squared_numbers)
 # Output: [1, 4, 9, 16, 25]
 
-# ------------------------------------------------------------------------------
-
-# String -  Slicing (التقطيع أو القص)
-text = "Programming"
-print(text[0])      # P   (الحرف الأول)
-print(text[3:7])    # gram (الحروف من 3 إلى 6)
-print(text[:6])     # Progra (من البداية حتى 5)
-print(text[-3:])    # ing   (آخر 3 أحرف)
-print(text[::2])    # Pgamn (كل حرف ثاني)
-print(text[::-1])   # gnimmargorP (النص مقلوب)
-
-# ----------------------------------------------------------------------------------
 num1 = 0 
 num2 = 0
 
@@ -265,3 +253,141 @@ for x in range(5):
         num2 = y + 3 # 13 +3 = 16
 
 print(num1 + num2) #4 + 16 = 20
+
+
+# ------------------------------------------------------------------------------
+#Strings
+# String - Concatenation (الربط)
+greeting = "Hello"
+name = "Jana"
+print(greeting + " " + name)  # Hello Jana
+
+# String - Repetition (التكرار)
+print(greeting * 3)  # HelloHelloHello
+
+# String - Length (الطول)
+print(len(greeting))  # 5 (عدد الحروف في النص)
+
+# String - Case Conversion (تحويل الحالة)
+print(greeting.lower()) # hello
+print(greeting.upper())  # HELLO
+
+# String - Finding Substrings (البحث عن أجزاء من النص)
+text = "Hello, welcome to Python programming!"
+print(text.find("welcome"))  # 7 (موقع الكلمة "welcome" في النص)
+print(text.find("Python"))  # 15 (موقع الكلمة "Python" في النص)
+print(text.find("Java"))  # -1 (لا توجد الكلمة "Java" في النص)
+
+# String - Replacing Substrings (استبدال أجزاء من النص)
+print(text.replace("Python", "Java"))  # Hello, welcome to Java programming!
+
+# String - Splitting and Joining (التقسيم والانضمام)
+sentence = "Python is fun"
+words = sentence.split()    # ['Python', 'is', 'fun'] (تقسيم الجملة إلى كلمات)
+test = "How-much-wood-would-a-woodchuck-chuck"
+print(test.split("-"))  # prints ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
+print("-".join(test.split()))  # How-much-wood-would-a-woodchuck-chuck (انضمام الكلمات إلى جملة)
+
+print("-".join(test.split())) # How-much-wood-would-a-woodchuck-chuck (انضمام الكلمات إلى جملة)
+print(" ".join(words))  # Python is fun (انضمام الكلمات إلى جملة)
+" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"]) # This is a phrase joined by spaces
+
+# String - Checking Prefix and Suffix (التحقق من البادئة واللاحقة)
+filename = "example.txt"
+print(filename.startswith("example"))  # True (الملف يبدأ بـ "example")
+print(filename.endswith(".txt"))  # True (الملف ينتهي بـ ".txt")
+
+# String - Checking Membership (التحقق من العضوية)
+text = "Hello, World!"
+print("Hello" in text)  # True (الكلمة "Hello" موجودة في النص)
+print("Python" in text)  # False (الكلمة "Python" غير موجودة في النص)
+
+# String - Formatting (التنسيق)
+name = "Jana"
+age = 25
+print(f"My name is {name} and I am {age} years old.")  # My name is Jana and I am 25 years old.
+
+# String - Checking if String is Alphanumeric (التحقق مما إذا كان النص أبجدي رقمي)      
+text = "Hello123"
+print(text.isalnum())  # True (النص يحتوي على أحرف وأرقام فقط)
+text = "Hello 123"
+print(text.isalnum())  # False (النص يحتوي على مسافات)
+
+# String - Checking if String is Alphabetic (التحقق مما إذا كان النص أبجدي)
+text = "Hello"
+print(text.isalpha())  # True (النص يحتوي على أحرف فقط)
+text = "Hello123"   
+print(text.isalpha())  # False (النص يحتوي على أرقام)
+
+# String - Checking if String is Numeric (التحقق مما إذا كان النص رقمي)
+text = "12345"
+print(text.isdigit())  # or text.isnumeric() -> True (النص يحتوي على أرقام فقط)
+text = "12345abc"
+print(text.isdigit())  # False (النص يحتوي على أحرف)
+
+# String - Stripping Whitespace (إزالة الفراغات)
+text = "   Hello, World!   "
+print(text.strip())  # Hello, World! (إزالة الفراغات من البداية والنهاية)
+print(text.lstrip())  # Hello, World!   (إزالة الفراغات من البداية فقط)
+print(text.rstrip())  #    Hello, World! (إزالة الفراغات من النهاية فقط)
+
+# String -  Slicing (التقطيع أو القص)
+text = "Programming"
+print(text[0])      # P   (الحرف الأول)
+print(text[-1])     # g   (الحرف الأخير)
+print(text[3:7])    # gram (الحروف من 3 إلى 6)
+print(text[:6])     # Progra (من البداية حتى 5)
+print(text[6:])     # ming (من 6 إلى النهاية)
+print(text[::2])    # Pgamn (كل حرف ثاني)
+print(text[::-1])   # gnimmargorP (النص مقلوب)
+
+pets="Cats & Dogs"
+pets.index("t") # 1
+pets.index("x") # ValueError: substring not found
+"t" in pets # True
+"x" in pets # False
+
+"The number of times e occurs in this string is 4".count("e") # 4
+
+for c in "abcde": print(c) # Output:
+# a
+# b
+# c
+# d
+# e
+
+# String - Formatting with f-strings (تنسيق النصوص باستخدام f-strings)
+# 1 - Using f-strings
+name = "Jana"
+age = 25
+print(f"My name is {name} and I am {age} years old.")  # My name is Jana and I am 25 years old.
+# 2 - Using format method
+name = "Manny"
+number = len(name) * 3
+print("Hello {}, your lucky number is {}".format(name, number)) # Hello Manny, your lucky number is 15.
+print("Your lucky number is {number}, {name}.".format(name=name, number=len(name)*3)) # Your lucky number is 15, Manny.
+
+def to_celsius(x):
+  return (x-32)*5/9
+
+for x in range(0,101,10):
+  print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+# Output:
+#  0 F |  -17.78 C  
+# 10 F |  -12.22 C
+# 20 F |   -6.67 C
+# 30 F |   -1.11 C
+# 40 F |    4.44 C
+# 50 F |   10.00 C
+# 60 F |   15.56 C
+# 70 F |   21.11 C
+# 80 F |   26.67 C
+# 90 F |   32.22 C
+#100 F |   37.78 C
+
+basket = [
+ ("Peaches", 3.0, 2.99),
+ ("Pears", 5.0, 1.66),
+ ("Plums", 2.5, 3.99)
+]
+
