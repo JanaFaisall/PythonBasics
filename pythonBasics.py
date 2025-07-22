@@ -371,7 +371,7 @@ def to_celsius(x):
   return (x-32)*5/9
 
 for x in range(0,101,10):
-  print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+  print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x))) # :>3 means right-align the number in a field of width 3
 # Output:
 #  0 F |  -17.78 C  
 # 10 F |  -12.22 C
@@ -385,6 +385,12 @@ for x in range(0,101,10):
 # 90 F |   32.22 C
 #100 F |   37.78 C
 
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+# Output: 7.5 8.18 
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+# Output: Base price: $7.50. With Tax: $8.18
 basket = [
  ("Peaches", 3.0, 2.99),
  ("Pears", 5.0, 1.66),
