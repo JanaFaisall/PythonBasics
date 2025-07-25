@@ -404,6 +404,7 @@ my_dict = {
     "age": 21,
     "major": "Computer Science"
 }
-print("Name: {name}, Age: {age}, Major: {major}".format(**my_dict))
-# Output: Name: Jana, Age: 21, Major: Computer Science    
+print("Name: {name}, Age: {age}, Major: {major}".format(my_dict))
+# Output: Name: Jana, Age: 21, Major: Computer Science   
+
 # ------------------------------------------------------------------------------
