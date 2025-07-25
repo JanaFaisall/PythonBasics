@@ -397,3 +397,13 @@ basket = [
  ("Plums", 2.5, 3.99)
 ]
 
+# Dictionary Formatting
+
+my_dict = {
+    "name": "Jana",
+    "age": 21,
+    "major": "Computer Science"
+}
+print("Name: {name}, Age: {age}, Major: {major}".format(**my_dict))
+# Output: Name: Jana, Age: 21, Major: Computer Science    
+# ------------------------------------------------------------------------------
