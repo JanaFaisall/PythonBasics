@@ -1,3 +1,8 @@
+# NOTE:
+# This file contains study notes and illustrative examples.
+# Some lines are intentionally written to demonstrate errors
+# and are not meant to be executed all at once.
+
 # ------------------------------------------------------------------------------
 
 name = input("Enter Your Name: ")  # input statement
