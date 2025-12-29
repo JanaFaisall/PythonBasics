@@ -16,12 +16,5 @@ This repository contains a **single Python file** with my personal study notes a
 
 ---
 
-## Files
-- `python_basics_notes.py` – Python code with commented study notes
-- `README.md` – Project overview
-
----
-
 ## Notes
 - This is a learning reference, not a production project
-- Code is intentionally simple and exploratory
